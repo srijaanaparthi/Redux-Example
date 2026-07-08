@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import {useState} from 'react';
 function App() {
+  const [name,setName] =useState();
+  const [university,setUniversity] = useState();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+    <h2>Student Details</h2>
+    <label>name</label>
+    <input
+    type="text"
+    value={name}
+    onChange={(e) => setName(e.target.value)}
+    required
+    ></input>
+    <br>
+    </br>
+    <label>University</label>
+    <input
+    type='text'
+    value={university}
+    required
+    onChange={(e)=>setUniversity(e.target.value)}>
+    </input>
+    <br></br>
+    <button>Add Student</button>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>UNIVERSITY</th>
+        </tr>
+      </thead>
+    </table>
     </div>
-  );
+  )   
+
 }
 
 export default App;
