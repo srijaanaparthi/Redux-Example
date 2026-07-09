@@ -1,7 +1,7 @@
 import {configureStore} from "@reduxjs/toolkit"
-import studentReducer from './Slices/studentSlice'
+import employeeReducer from './Slices/employeeSlice'
 export const store=configureStore({
   reducer:{
-    student:studentReducer,
+    employee:employeeReducer,
   },  
 })

@@ -4,6 +4,8 @@
 input{
   margin-bottom:10px;
   padding:4px;
+  width: 50%;
+  border: none;
   border-radius: 4px;
 }
 button{
@@ -15,6 +17,7 @@ button{
 }
 table{
   margin-top: 10px;
+
   width: 50%;
   height: 100%;
   border: 1px solid black;
@@ -38,4 +41,34 @@ th,td{
   padding: 4px;
   border-radius: 8px;
   width: 60px;
+}
+table{
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+}
+
+.f{
+    width: 500px;
+ margin-inline-start: 5%;
+   padding: 5%;
+   height: fit-content;
+   text-align: center;
+   color:rgb(14, 16, 18);
+  
+   border-radius: 5%;
+
+}
+.i/p{
+   margin: 3%;
+  color:black;
+  margin-inline-start: 1%;
+  padding: 3%;
+ width: 60%;
+ height: 40%;
+border-radius: 12px;
+ border-color: aliceblue;
+}
+.btn{
+  background-color: green;
 }
