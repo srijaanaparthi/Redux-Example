@@ -25,3 +25,17 @@ th,td{
   border:1px solid black;
   text-align: center;
 }
+.edit{
+  color:aliceblue;
+  background-color: #0000ff;
+  border-radius: 8px;
+  margin-right: 10px;
+  width: 60px;
+}
+.delete{
+  color: aliceblue;
+  background-color: red;
+  padding: 4px;
+  border-radius: 8px;
+  width: 60px;
+}
