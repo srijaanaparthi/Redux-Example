@@ -12,7 +12,7 @@ const studentSlice =createSlice({
         state.loading=true;
         state.error=null;
        },
-       fetchSucess(state,action){
+       fetchSuccess(state,action){
          state.loading=false;
          state.students=action.payload;
        },
@@ -22,5 +22,5 @@ const studentSlice =createSlice({
        },
     }
 })
-export const { fetchStart,fetchSucess,fetchFailure} = studentSlice.actions;
+export const { fetchStart,fetchSuccess,fetchFailure} = studentSlice.actions;
 export default studentSlice.reducer;
