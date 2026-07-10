@@ -107,6 +107,30 @@ useEffect(() => {
   return (
     <div className='container'>
   <h1>Employee Management System</h1>
+  <div className='f'>
+      <h2>ADD EMPLOYEE</h2>
+      <div className='i/p'>
+       <label>FIRST NAME</label>
+          <input type='text'placeholder='Enter Name' value={name} onChange={(e)=>setName(e.target.value)} required></input>
+          <br></br>
+          <label>LAST NAME</label>
+          <input type='text' value={lastname} placeholder='Enter last Name' onChange={(e)=>setLastname(e.target.value)} required></input>
+          <br></br>
+          <label>EMAIL</label>
+          <input type='text' value={email} placeholder='Enter email' onChange={(e)=>setEmail(e.target.value)} required></input>
+          <br></br>
+          <label>AGE</label>
+          <input type='text' value={age} placeholder='Enter age' onChange={(e)=>setAge(e.target.value)} required></input>
+          <br></br>
+          <label>GENDER</label>
+          <input type='text' placeholder='Enter gender' value={gender} onChange={(e)=>setGender(e.target.value)} required></input>
+          <br></br>
+          <label>UNIVERSITY</label>
+          <input type='text'placeholder='Enter University' value={university} onChange={(e)=>setUniversity(e.target.value)} required></input>
+          <br></br>
+          </div>
+          <button className='btn' onClick={handleAdd}>Submit</button>
+          </div>
   {loading && <h2>loading...</h2>}
   {error && <h2>{error}</h2>}
   <table className='t'>
@@ -146,30 +170,7 @@ useEffect(() => {
       
       </tbody>
       </table>
-      <div className='f'>
-      <h2>ADD EMPLOYEE</h2>
-      <div className='i/p'>
-       <label>FIRST NAME</label>
-          <input type='text'placeholder='Enter Name' value={name} onChange={(e)=>setName(e.target.value)} required></input>
-          <br></br>
-          <label>LAST NAME</label>
-          <input type='text' value={lastname} placeholder='Enter last Name' onChange={(e)=>setLastname(e.target.value)} required></input>
-          <br></br>
-          <label>EMAIL</label>
-          <input type='text' value={email} placeholder='Enter email' onChange={(e)=>setEmail(e.target.value)} required></input>
-          <br></br>
-          <label>AGE</label>
-          <input type='text' value={age} placeholder='Enter age' onChange={(e)=>setAge(e.target.value)} required></input>
-          <br></br>
-          <label>GENDER</label>
-          <input type='text' placeholder='Enter gender' value={gender} onChange={(e)=>setGender(e.target.value)} required></input>
-          <br></br>
-          <label>UNIVERSITY</label>
-          <input type='text'placeholder='Enter University' value={university} onChange={(e)=>setUniversity(e.target.value)} required></input>
-          <br></br>
-          </div>
-          <button className='btn' onClick={handleAdd}>Submit</button>
-          </div>
+      
 </div>
   );
 
