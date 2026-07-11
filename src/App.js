@@ -1,4 +1,3 @@
-
 import './App.css';
 import { useEffect,useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -26,13 +25,12 @@ function App() {
                email:email,
                age:age,
               gender:gender,
-            university: university
-
+            university: university,
         })
-
     })
     .then(res => res.json())
     .then(data => {
+         data.id=Date.now();
         dispatch(addEmployees(data));
   setName("");
   setLastname("");
@@ -41,7 +39,6 @@ function App() {
   setGender("")
   setUniversity("");
     });
-
 }
  const handleDelete = (id) => {
     fetch(`https://dummyjson.com/users/${id}`, {
@@ -51,21 +48,11 @@ function App() {
     .then(() => {
         dispatch(deleteEmployees(id));
     });
-
 }
 const handleUpdate = (employee) => {
-
-    const newName = prompt(
-        "Enter Name",
-        employee.firstName
-    );
-      const newlastName=prompt(
-        "enter last name",
-        employee.lastName )
-    const newUniversity = prompt(
-        "Enter University",
-        employee.university
-    );
+    const newName = prompt("Enter Name",employee.firstName );
+      const newlastName=prompt("enter last name",employee.lastName );
+    const newUniversity = prompt( "Enter University", employee.university);
     const newemail=prompt("enter email",employee.email);
             const newage=prompt("enter age",employee.age );
             const newgender=prompt("enter gender",employee.gender);
@@ -81,16 +68,12 @@ const handleUpdate = (employee) => {
              age:newage,
              gender:newgender,
             university: newUniversity
-
         })
-
     })
     .then(res => res.json())
     .then(data => {
         dispatch(updatedEmployees(data));
-
     });
-
 }
 useEffect(() => {
   dispatch(fetchStart());
@@ -129,7 +112,7 @@ useEffect(() => {
           <input type='text'placeholder='Enter University' value={university} onChange={(e)=>setUniversity(e.target.value)} required></input>
           <br></br>
           </div>
-          <button className='btn' onClick={handleAdd}>Submit</button>
+          <button className='btn'  onClick={handleAdd}>Submit</button>
           </div>
   {loading && <h2>loading...</h2>}
   {error && <h2>{error}</h2>}
@@ -137,10 +120,10 @@ useEffect(() => {
     <thead>
       <tr>
         <th>firstName</th>
-        <th>lastName</th>
-        <th>Email</th>
-        <th>Age</th>
-        <th>gender</th>
+         <th>lastName</th>
+          <th>Email</th>
+          <th>Age</th>
+          <th>gender</th>
         <th>University</th>
         <th>Edit</th>
         <th>Delete</th>
@@ -149,14 +132,13 @@ useEffect(() => {
         <tbody>
    {employees.map((employee) => (
         <tr key={employee.id}>
-        <td>{employee.firstName}</td> 
-        <td>{employee.lastName}</td>
-        <td>{employee.email}</td>
-        <td>{employee.age}</td>
-        <td>{employee.gender}</td>
+         <td>{employee.firstName}</td> 
+          <td>{employee.lastName}</td>
+           <td>{employee.email}</td>
+           <td>{employee.age}</td>
+          <td>{employee.gender}</td>
          <td> {employee.university}</td>
-
-         <td>
+       <td>
          <button className='edit'
           onClick={()=>handleUpdate(employee)}
          >edit</button>
@@ -165,16 +147,10 @@ useEffect(() => {
          <button className='delete' onClick={()=>handleDelete(employee.id)}>delete</button>
          </td>
         </tr>
-
       ))}
-      
-      </tbody>
+            </tbody>
       </table>
-      
-</div>
+    </div>
   );
-
-
 }
-
 export default App;

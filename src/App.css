@@ -52,28 +52,23 @@ table{
 
 .f{
     width: 500px;
-    margin-left: 20%;
+    margin-left: 25%;
    padding: 5%;
    height: fit-content;
-   text-align: center;
    color:rgb(14, 16, 18);
-   justify-content: center;
-   align-items: center;
    border-radius: 5%;
    background-color: rgba(240, 248, 255, 0.557);
-
 }
 .i/p{
-   margin: 3%;
+   margin-left: 0%;
+   display: block;
   color:black;
-  text-align: center;
-  margin-inline-start: 1%;
+  margin-bottom:30%;
   padding: 3%;
  width:80%;
  height: 40%;
 border-radius: 12px;
  border-color: aliceblue;
-
 }
 .btn{
   background-color: green;
@@ -83,5 +78,9 @@ border-radius: 12px;
   background-color: rgba(39, 39, 40, 0.728);
 }
 label{
+  display: block;
+  text-align:left ;
+  align-items: start;
+  margin-left: 120px;
   font-size: 10px;
 }
